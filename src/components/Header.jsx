@@ -16,7 +16,7 @@ export default function Header() {
     <div >
         <header className='absolute top-0 z-50'>
             <div className='flex space-x-64 px-5 mt-2'>
-               <NavLink to='/'>
+               <NavLink to='/space-tourism'>
                   <img src={logo} alt="logo"  title='logo'/>
                </NavLink>
                <div onClick={handleNav} className='p-2 sm:hidden'>
