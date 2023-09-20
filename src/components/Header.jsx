@@ -31,7 +31,7 @@ export default function Header() {
                   
               <ul className='flex flex-col space-y-10 ml-20 py-10'>
                 <li onClick={() => setNav(!Nav)} className="cursor-pointer">
-                 <NavLink to='/Home'> 
+                 <NavLink to='/space-tourism'> 
                      <span>00</span> Home
                  </NavLink>  
                 </li>
