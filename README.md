@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/Kehinde13/space-tourism)
-- Live Site URL: (https://kehinde13.github.io/space-tourism/)
+- [Solution URL](https://github.com/Kehinde13/space-tourism)
+- [Live Site URL](https://kehinde13.github.io/space-tourism/)
 
 ## My process
 
