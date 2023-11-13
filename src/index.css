@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+
+.home {
+  background: url("./assets/home/background-home-mobile.jpg")
+  no-repeat center/cover;
+  height: 100%;
+}
+
+.destination {
+  background: url("./assets/destination/background-destination-mobile.jpg")
+  no-repeat center/cover;
+}
+
+.crew {
+  background: url("./assets/crew/background-crew-mobile.jpg")
+  no-repeat center/cover;
+}
+
+.Tech {
+  background: url("./assets/technology/background-technology-mobile.jpg")
+  no-repeat center/cover;
+}
+
+
+
+@media (min-width: 780px) {
+  .home {
+      background: url("./assets/home/background-home-tablet.jpg")
+      no-repeat center/cover;
+      height: 100vh;
+  }
+  .destination {
+  background: url("./assets/destination/background-destination-tablet.jpg")
+  no-repeat center/cover;
+ }
+ .crew {
+  background: url("./assets/crew/background-crew-tablet.jpg")
+  no-repeat center/cover;
+ }
+ .Tech {
+  background: url("./assets/technology/background-technology-tablet.jpg")
+  no-repeat center/cover;
+  
+}
+}
+
+@media (min-width: 1024px) {
+  .home{
+      background: url("./assets/home/background-home-desktop.jpg")
+      no-repeat center/cover;
+      overflow: hidden;
+  }
+  .destination {
+  background: url("./assets/destination/background-destination-desktop.jpg")
+  no-repeat center/cover;
+ }
+ .crew {
+  background: url("./assets/crew/background-crew-desktop.jpg")
+  no-repeat center/cover;
+  }
+  .Tech {
+  background: url("./assets/technology/background-technology-desktop.jpg")
+  no-repeat center/cover;
+  }
+}
+
+.home .overlay {
+  align-items: center;
+  height: calc(100vh + 1px);
+}
+
+.lgbar {
+  backdrop-filter: blur(30px);
+  --webkit-backdrop-filter: (4px);
+}
+
+@tailwind utilities;
+
+
+
+
+
+
+
