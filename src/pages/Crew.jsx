@@ -18,7 +18,7 @@ function Crew() {
     const res = await fetch('https://my-json-server.typicode.com/Kehinde13/demo.json/crew');
     const data = await res.json()
     
-     setCrew(data);
+    setCrew(data);
   
   } 
 

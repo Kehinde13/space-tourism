@@ -14,9 +14,9 @@ export default function Header() {
 
   return (
     <div >
-        <header className='absolute top-0 z-50'>
-            <div className='flex space-x-64 px-5 mt-2'>
-               <NavLink to='/space-tourism'>
+        <header className='fixed  top-0 z-50 md:p-4'>
+            <div className='flex space-x-64 px-5 mt-5'>
+               <NavLink to='/'>
                   <img src={logo} alt="logo"  title='logo'/>
                </NavLink>
                <div onClick={handleNav} className='p-2 sm:hidden'>
@@ -26,12 +26,12 @@ export default function Header() {
             </div>
 
             <nav className={ !Nav ? 
-                'sm:hidden w-[250px] bg-slate-800 text-gray-200 mx-16 ease-in-out duration-500' 
+                'sm:hidden w-[80%] bg-slate-800 text-gray-200 mx-10 ease-in-out duration-500' 
                 : "fixed top-[1000px]"} >
                   
-              <ul className='flex flex-col space-y-10 ml-20 py-10'>
+              <ul className='flex flex-col space-y-8 text-xl ml-20 py-10'>
                 <li onClick={() => setNav(!Nav)} className="cursor-pointer">
-                 <NavLink to='/space-tourism'> 
+                 <NavLink to='/'> 
                      <span>00</span> Home
                  </NavLink>  
                 </li>
@@ -53,11 +53,11 @@ export default function Header() {
               </ul>
             </nav>
 
-            <nav className= "hidden sm:flex ">
-              <ul className='flex space-x-10 p-4 px-8 lg:px-12 lgbar 
-                             relative bottom-12 left-[270px] lg:left-[800px] text-white'>
+            <nav className= "hidden sm:flex">
+              <ul className='flex space-x-10 p-4 px-8 lg:px-12 lgbar py-5
+                             relative bottom-12 left-[270px] lg:left-[900px] text-xl text-white'>
                 <li className='hover:border-b-2 border-white cursor-pointer'>
-                  <NavLink to="/Home">
+                  <NavLink to="/">
                      <span className='font-bold'>00</span> Home
                   </NavLink> 
                 </li>
@@ -82,3 +82,5 @@ export default function Header() {
     </div>
   )
 }
+
+

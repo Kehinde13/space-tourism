@@ -17,8 +17,7 @@ function Destination() {
     const res = await fetch('https://my-json-server.typicode.com/Kehinde13/demo.json/destinations')
     const data = await res.json()
     
-     setPlanet(data);
-  
+    setPlanet(data);
   
   } 
 
@@ -31,7 +30,7 @@ function Destination() {
     <div>
       
       <section className='px-4 home destination'>
-        <h1 className='pt-20 lg:ml-32 text-white md:text-2xl 
+        <h1 className='pt-20 lg:ml-32 text-white md:text-2xl md:pt-40
                lg:text-left text-xl uppercase mb-10 text-center'>
          <span className='text-gray-400'>01</span> pick  your destination
         </h1>
