@@ -50,7 +50,7 @@ function Technology() {
             src={imagesP[value]} 
             alt={name} 
             title={name} 
-            className="block mx-auto w-3/4 "
+            className="block mx-auto w-[80%]"
             /> 
           </article>
 

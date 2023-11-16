@@ -46,7 +46,7 @@ function Crew() {
              src={images[value]} 
              alt={name} 
              title={name} 
-             className="block mx-auto w-1/2 sm:pt-5 lg:pt-0"
+             className="block mx-auto w-[70%] sm:pt-5 lg:pt-0"
              /> 
           </article>
 
