@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
+import { gsap } from "gsap";
 import vehicleP from '../assets/technology/image-launch-vehicle-portrait.jpg';
 import vehiclel from '../assets/technology/image-launch-vehicle-landscape.jpg';
 import capsuleP from '../assets/technology/image-space-capsule-portrait.jpg';
@@ -10,6 +11,7 @@ function Technology() {
 
   const [Tech, setTech] = useState([]) 
   const [value, setValue] = useState(0)
+  const app = useRef()
 
   const {name, description} = Tech[value] || {};
 
@@ -27,6 +29,20 @@ function Technology() {
 
   useEffect(() => {
     fetchDestination()
+  }, []);
+
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      app.current,
+      {
+        y: -600,
+        duration: 5,
+        
+      },
+      {
+        y: 0,
+      }
+    );
   }, []);
 
   return (
@@ -51,6 +67,7 @@ function Technology() {
             alt={name} 
             title={name} 
             className="block mx-auto w-[80%]"
+            ref={app}
             /> 
           </article>
 
@@ -61,9 +78,9 @@ function Technology() {
             {Tech.map((item, index) => (
                 <button key={index} onClick={() => 
                 setValue(index)} 
-                className={`text-white h-12 w-12 rounded-full pb-2 md:p-3 my-5
+                className={`text-white h-12 w-12 rounded-full pb-2 md:p-3 my-5 text-center
                           text-2xl border-2 border-white p-1 m-2 lg:flex flex-row
-                          ${index === value && "bg-white text-gray-700"}`}>
+                          ${index === value && "bg-white text-black"}`}>
                   {index + 1}
                 </button>
               ))}

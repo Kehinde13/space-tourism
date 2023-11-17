@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef, useLayoutEffect } from 'react';
+import { gsap } from "gsap";
 import europa from '../assets/destination/image-europa.png';
 import mars from '../assets/destination/image-mars.png';
 import titan from '../assets/destination/image-titan.png';
@@ -8,6 +9,7 @@ import moon from '../assets/destination/image-moon.png'
 function Destination() {
   const [planets, setPlanet] = useState([]) 
   const [value, setValue] = useState(0)
+  const app = useRef();
 
   const {name, description, distance, travel} = planets[value] || {};
 
@@ -25,6 +27,20 @@ function Destination() {
     fetchDestination()
   }, []);
 
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      app.current,
+      {
+        x: -600,
+        duration: 5,
+        
+      },
+      {
+        x: 0,
+      }
+    );
+  }, []);
+
 
   return (
     <div>
@@ -35,7 +51,7 @@ function Destination() {
          <span className='text-gray-400'>01</span> pick  your destination
         </h1>
 
-        <div className=' lg:grid grid-cols-2 gap-5
+        <div className=' lg:grid grid-cols-2 gap-10
                         md:items-center lg:max-w-7xl 
                         lg:mx-auto '>
           <article>
@@ -44,6 +60,7 @@ function Destination() {
              alt={name} 
              title={name} 
              className="block mx-auto w-3/4 mb-10"
+             ref={app}
              /> 
           </article>
 

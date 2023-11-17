@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef, useLayoutEffect } from 'react'
+import { gsap } from "gsap";
 import { BsCircle } from 'react-icons/bs'
 import doug from '../assets/crew/image-douglas-hurley.png';
 import mark from '../assets/crew/image-mark-shuttleworth.png';
@@ -9,6 +10,7 @@ import ans from '../assets/crew/image-anousheh-ansari.png'
 function Crew() {
   const [crew, setCrew] = useState([]) 
   const [value, setValue] = useState(0)
+  const app = useRef()
 
   const {name, role, bio} = crew[value] || {};
 
@@ -24,6 +26,20 @@ function Crew() {
 
   useEffect(() => {
     fetchDestination()
+  }, []);
+
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      app.current,
+      {
+        y: 600,
+        duration: 5,
+        
+      },
+      {
+        y: 0,
+      }
+    );
   }, []);
 
 
@@ -47,6 +63,7 @@ function Crew() {
              alt={name} 
              title={name} 
              className="block mx-auto w-[70%] sm:pt-5 lg:pt-0"
+             ref={app}
              /> 
           </article>
 
