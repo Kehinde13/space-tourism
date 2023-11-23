@@ -50,6 +50,7 @@ Users should be able to:
 - React Router - ReactJS library
 - tailwindCSS - For styles
 - My JSON Server - Fake Online REST server
+- GSAP
 
 
 ### What I learned

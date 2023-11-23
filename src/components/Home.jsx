@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from 'react'
+import { useRef, useLayoutEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import gsap from 'gsap'
 
