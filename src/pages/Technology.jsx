@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
+import { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import { gsap } from "gsap";
 import vehicleP from '../assets/technology/image-launch-vehicle-portrait.jpg';
 import vehiclel from '../assets/technology/image-launch-vehicle-landscape.jpg';
@@ -66,7 +66,7 @@ function Technology() {
             src={imagesP[value]} 
             alt={name} 
             title={name} 
-            className="block mx-auto w-[80%]"
+            className="block mx-auto md:w-[60%] w-[80%]"
             ref={app}
             /> 
           </article>

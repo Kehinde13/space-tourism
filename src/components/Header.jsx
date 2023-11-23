@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import logo from '../assets/shared/logo.svg'
 import close from '../assets/shared/icon-close.svg'
 import hamburger from '../assets/shared/icon-hamburger.svg'
@@ -53,9 +53,9 @@ export default function Header() {
               </ul>
             </nav>
 
-            <nav className= "hidden sm:flex">
+            <nav className="hidden sm:flex">
               <ul className='flex space-x-10 p-4 px-8 lg:px-12 lgbar py-5
-                             relative bottom-12 left-[270px] lg:left-[900px] text-xl text-white'>
+                             relative bottom-12 left-[270px] lg:left-[700px] text-xl text-white'>
                 <li className='hover:border-b-2 border-white cursor-pointer'>
                   <NavLink to="/">
                      <span className='font-bold'>00</span> Home

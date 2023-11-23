@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from 'react';
+import { useEffect, useState, useRef, useLayoutEffect } from 'react';
 import { gsap } from "gsap";
 import europa from '../assets/destination/image-europa.png';
 import mars from '../assets/destination/image-mars.png';
@@ -59,7 +59,7 @@ function Destination() {
              src={images[value]} 
              alt={name} 
              title={name} 
-             className="block mx-auto w-3/4 mb-10"
+             className="block mx-auto w-3/4 md:w-[60%] mb-10"
              ref={app}
              /> 
           </article>

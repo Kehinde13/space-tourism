@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from 'react'
+import { useEffect, useState, useRef, useLayoutEffect } from 'react'
 import { gsap } from "gsap";
 import { BsCircle } from 'react-icons/bs'
 import doug from '../assets/crew/image-douglas-hurley.png';
@@ -62,7 +62,7 @@ function Crew() {
              src={images[value]} 
              alt={name} 
              title={name} 
-             className="block mx-auto w-[70%] sm:pt-5 lg:pt-0"
+             className="block mx-auto w-[70%] md:w-[50%] sm:pt-5 lg:pt-0"
              ref={app}
              /> 
           </article>
